@@ -1,0 +1,20 @@
+<mvc:View xmlns:table="sap.ui.table" controllerName="sampleflight.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+    <Page title="{i18n>title2}">
+        <content>
+       <form:SimpleForm >
+    <form:content>
+     <Label text="NAME"/>
+    <Input editable="false" id="idName" />
+    <Label text="Telephone"/>
+    <Input editable="false" value="{/TELEPHONE}" />
+    <Label text="URL"/>
+    <Input editable="false" value="{/URL}"/>
+     <Label text="LANGUAGE"/>
+     <Input editable="false" value="{/LANGU}"/>
+    </form:content>
+    </form:SimpleForm>
+     </content>
+    </Page>
+</mvc:View>

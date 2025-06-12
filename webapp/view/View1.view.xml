@@ -1,0 +1,46 @@
+<mvc:View xmlns:table="sap.ui.table" controllerName="sampleflight.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content />
+        <Table noDataText="NoData" items="{/TravelagencyCollection}" mode="SingleSelectLeft" itemPress="pressItem">
+            <headerToolbar>
+                <Toolbar>
+                    <SearchField />
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column >
+                    <Text text="NAME" />
+                </Column>
+                <Column >
+                    <Text text="STREET" />
+                </Column>
+                <Column >
+                    <Text text="POSTBOX" />
+                </Column>
+                <Column >
+                    <Text text="POSTCODE" />
+                </Column>
+                <Column >
+                    <Text text="CITY" />
+                </Column>
+                <Column >
+                    <Text text="COUNTRY" />
+                </Column>
+            </columns>
+            <items>
+            <ColumnListItem type="Active">
+            <cells>
+            <Text text="{NAME}" />
+            <Text text="{STREET}" />
+             <Text text="{POSTBOX}" />
+              <Text text="{POSTCODE}" />
+                    <Text text="{CITY}" />
+               <Text text="{COUNTRY}" />
+            </cells>
+            </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>
