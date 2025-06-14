@@ -1,12 +1,14 @@
 <mvc:View xmlns:table="sap.ui.table" controllerName="sampleflight.controller.View2"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m" xmlns:form="sap.ui.layout.form">
-    <Page title="{i18n>title2}">
+    <Page title="{i18n>title2}" showNavButton="true" navButtonPress="onBackPress">
         <content>
-       <form:SimpleForm >
+       <form:SimpleForm>
     <form:content>
      <Label text="NAME"/>
-    <Input editable="false" id="idName" />
+    <Input editable="false" value="{/NAME}" />
+    <Label text="AgencyNumber"/>
+    <Input editable="false" id="agencynum" />
     <Label text="Telephone"/>
     <Input editable="false" value="{/TELEPHONE}" />
     <Label text="URL"/>
@@ -16,5 +18,12 @@
     </form:content>
     </form:SimpleForm>
      </content>
+     <footer>
+     <Bar >
+     <contentLeft>
+      <Button text="Edit" icon="sap-icon://edit" press=""/>
+      </contentLeft> 
+       </Bar>
+     </footer>
     </Page>
 </mvc:View>

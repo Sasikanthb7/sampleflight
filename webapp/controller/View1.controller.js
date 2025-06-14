@@ -10,8 +10,11 @@ function (Controller) {
         },
         pressItem: function(oEvent) {
             let oRouter=this.getOwnerComponent().getRouter();
-           oRouter.navTo("RouteView2");
-
+            let sPath = oEvent.getParameter("listItem").getBindingContext().getPath();
+            let oModel=this.getView().getModel();
+            oModel.getProperty(sPath);
+            let agynum = oModel.getProperty(sPath).agencynum;
+            oRouter.navTo("RouteView2", {agynum:agynum});
         }
     });
 });

@@ -105,7 +105,7 @@
         },
         {
           "name": "RouteView2",
-          "pattern": "RouteView2",
+          "pattern": "RouteView2/{agynum}",
           "target": [
             "TargetView2"
           ]
