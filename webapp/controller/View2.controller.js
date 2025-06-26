@@ -1,13 +1,18 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/model/json/JSONModel"
 ],
-function (Controller) {
+function (Controller,JSONModel) {
     "use strict";
 
     return Controller.extend("sampleflight.controller.View2", {
         onInit: function () {
             let oRouter=this.getOwnerComponent().getRouter();
             oRouter.getRoute("RouteView2").attachPatternMatched(this._onRouteMatched,this);
+            let editModel=new JSONModel({
+                isEditable:false
+            });
+            this.getView().setModel(editModel,"EditInpModel")
         },
         _onRouteMatched: function (oEvent) {
             let agynum=oEvent.getParameter("arguments").agynum;
@@ -24,6 +29,13 @@ function (Controller) {
         onBackPress: function () {
             let oRouter=this.getOwnerComponent().getRouter();
             oRouter.navTo("RouteView1");
-        } 
+        },
+        onEdit: function(oEvent){
+          let Edit=this.getView().getModel("EditInpModel");
+          Edit.setProperty("/isEditable",true)
+        },
+        onSave: function(oEvent){
+            
+        }
     });
 });

@@ -6,23 +6,26 @@
        <form:SimpleForm>
     <form:content>
      <Label text="NAME"/>
-    <Input editable="false" value="{/NAME}" />
+    <Input id="idName" editable="{EditInpModel>/isEditable}"  value="{/NAME}" />
     <Label text="AgencyNumber"/>
-    <Input editable="false" id="agencynum" />
+    <Input  id="agencynum" editable="{EditInpModel>/isEditable}"/>
     <Label text="Telephone"/>
-    <Input editable="false" value="{/TELEPHONE}" />
+    <Input id="idTel"  value="{/TELEPHONE}"  editable="{EditInpModel>/isEditable}"/>
     <Label text="URL"/>
-    <Input editable="false" value="{/URL}"/>
+    <Input id="idUrl"  value="{/URL}" editable="{EditInpModel>/isEditable}"/>
      <Label text="LANGUAGE"/>
-     <Input editable="false" value="{/LANGU}"/>
+     <Input id="idLang"  value="{/LANGU}" editable="{EditInpModel>/isEditable}"/>
     </form:content>
     </form:SimpleForm>
      </content>
      <footer>
      <Bar >
      <contentLeft>
-      <Button text="Edit" icon="sap-icon://edit" press=""/>
+      <Button text="Edit" icon="sap-icon://edit" type="Reject" press="onEdit"/>
       </contentLeft> 
+      <contentRight>
+       <Button text="Save" press="onSave" type="Emphasized" icon="sap-icon://save"/>
+      </contentRight>
        </Bar>
      </footer>
     </Page>
