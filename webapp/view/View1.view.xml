@@ -11,7 +11,7 @@
             </headerToolbar>
             <columns>
                 <Column >
-                    <Text text="NAME" />
+                    <Text text="NAMEX" />
                 </Column>
                 <Column >
                     <Text text="STREET" />
